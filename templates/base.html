@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/etrafli.css">
+   
+</head>
+<body>
+    <header class="header-navbar">
+        <div class="header1">
+          <div class="header-evveli">
+            <a href="#">Haqqımızda</a>
+            <a href="#">Tariflər,Məlumatlandırma və Standart Şərtlər</a>
+            <a href="#">Xəbərlər</a>
+            <a href="#">Xidmət şəbəkəsi</a>
+            <a href="#">Satınalmalar</a>
+            <a href="#">Dayanıqlı İnkişaf Hesabatları</a>
+            <a href="#">Araşdırma</a>
+            <a href="#" style="text-decoration: none;">Kariyera portalı</a>
+          </div>
+          <div class="nav-kenar">
+            <div class="axtaris">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Axtarış</p>
+            </div>
+            <div class="lang-menu1" onclick="toggleDropdown()">
+              <div class="select-lang1" style="gap:7px;" onclick="toggleRotation()">AZ<i class="fa-solid fa-angle-down" id="angleIcon"></i></div>
+              <ul id="langDropdown">
+                <li><img src="../static/images/united-kingdom.png" alt="">EN</li>
+                <li><img src="../static/images/russia.png" alt="">RU</li>
+              </ul>
+            </div>
+            <div class="phone1">
+              <i class="fa-solid fa-phone"></i>
+              <p>937</p>
+            </div>
+          </div>
+        </div>
+        <div class="sticky-nav">
+          <div class="nav-22">
+            <div class="abb-img-fkk">
+              <div class="abb-img">
+                <a href="{{url_for('abb')}}"><img src="../static/images/logo.svg" alt="" class="abb-logo"></a>
+              </div>
+              <div class="fkk">
+                <a href="">Fərdi</a>
+                <a href="">Korporativ</a>
+                <a href="">KOB</a>
+              </div>
+            </div>
+            <div class="internet-banking">
+              <img src="../static/images/internet-banking-signin.svg" alt="">
+              <p>İnternet Bankçılıq</p>
+            </div>
+          </div>
+          <div class="header2" style="border: 1px solid rgb(241, 241, 241);">
+            <div class="hisse-3">
+              <div class="ovelay">
+                <ul>
+                  <li class="basliqlar"> 
+                    <a href="{{url_for('kartlar')}}" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Kartlar</a> 
+                    <div class="modalbox">
+                      <div class="modalcontent1"> 
+                        <a href="#">Debet kartları</a>
+                        <a href="#">Kredit kartları</a>
+                        <a href="#">Adsız debet kartların eyniləşdirilməsi</a>
+                        <a href="#">SİMA Təlimatı</a>
+                        <span class="modalclose">&times;</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Kreditlər</a>
+                    <div class="modalbox">
+                      <div class="modalcontent2">
+                        <a href="">Online kredit al</a>
+                        <a href="">Nağd kredit</a>
+                        <a href="">Avtomobil krediti</a>
+                        <a href="">Əmanətçi kredit limiti</a>
+                        <a href="">Əmanətçi nağd krediti</a>
+                        <a href="">Kart üzrə kredit limiti</a>
+                        <span class="modalclose">&times;</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Onlayn Xidmətlər</a>
+                    <div class="modalbox">
+                      <div style="display: flex;gap:50px;margin-left: 30px;margin-bottom: 20px;">
+                        <div class="modalcontent" style="display: grid;grid-template-columns: 1.5fr 1.5fr;">
+                          <a href="">ABB mobile - Mobil Bank</a>
+                          <a href="">ABB Business Internet Bank</a>
+                          <a href="">R@ndevu</a>
+                          <a href="">Arayış sifariş edin</a>
+                          <a href="">Kredit ödəyin</a>
+                          <a href="">ATM</a>
+                          <a href="">Şənbə günü fəaliyyət göstərən filiallar</a>
+                          <a href="">Ödəniş terminalı</a>
+                          <a href="">Cash-In ATM-i</a>
+                          <a href="">Məlumat Mərkəzi 24/7</a>
+                          <a href="">FAQ</a>
+                          <a href="">İanə et</a>
+                          <span class="modalclose">&times;</span>
+                        </div>
+                        <div style="border-left:1px solid #dedede;padding-left:20px;">
+                          <img src="../static/images/phone-copy.webp" alt="">
+                        </div>
+                        <div class="modalin-icindeki-yazi">
+                          <h3>ABB mobile ilə İnvestisiya Hamıya rahat gəlir!</h3>
+                          <p>Yatırım imkanlarından faydalanın</p>
+                          <button style="width: 167.2px;">Daha ətraflı</button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Kampaniyalar</a>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Kəşbek</a>
+                    <div class="modalbox">
+                      <div style="display: flex;gap:250px;">
+                        <div class="modalcontent" style="height: 20%;display: grid;grid-template-columns: 2fr 2fr; padding-left: 50px; column-gap:50px; row-gap:20px;margin-top:30px;">
+                          <a href="">Faydalı keşbek</a>
+                          <a href="">QayğıCash klubu</a>
+                          <a href="">Fayda Max</a>
+                          <a href="">Avtomatik endirim</a>
+                          <span class="modalclose">&times;</span>
+                        </div>
+                        <div style="display: flex; padding-bottom:20px; gap:15px;">
+                          <div style="border-left:1px solid #dadada;padding-left: 20px;">
+                            <img src="../static/images/phone-pul.webp" alt="">
+                          </div>
+                          <div class="modalin-icindeki-yazi" style="width: 250px;">
+                            <h3>ABB mobile ilə İnvestisiya Hamıya rahat gəlir!</h3>
+                            <p>Yatırım imkanlarından faydalanın</p>
+                            <button style="width: 167.2px;">Daha ətraflı</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">İpoteka</a>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;">Pul Köçürmələri</a>
+                    <div class="modalbox">
+                      <div class="modalcontent3">
+                        <a href="">Valyuta tənzimlənməsi</a>
+                        <a href="">Hesabdan köçürmələr</a>
+                        <a href="">Təcili pul köçürmələri</a>
+                        <span class="modalclose">&times;</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Cari hesab</a>
+                    <div class="modalbox">
+                      <div class="modalcontent4">
+                        <a href="">DigiHesab açın</a>
+                        <a href="">Cari hesab açın</a>
+                        <a href="">Kassa əməliyyatları</a>
+                        <a href="">Hesabınıza nəzarət edin</a>
+                        <a href="">Arayış sifariş edin</a>
+                        <a href="">Mübadilə əməliyyatları</a>
+                        <span class="modalclose">&times;</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="basliqlar">
+                    <a href="" style="padding: 5px 5px 20px 5px;font-size: 15px;" class="bas">Əmanətlər</a>
+                    <div class="modalbox">
+                      <div class="modalcontent5">
+                        <a href="">"Klassik" əmanəti</a>
+                        <a href="">DigiDeposit</a>
+                        <a href="">Əmanətlərin sığortalanması</a>
+                        <a href="">Əmanətli ipoteka krediti</a>
+                        <a href="">Depozit seyfi</a>
+                        <span class="modalclose">&times;</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+       
+
+    {% block content %}
+
+    {% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>   
+<script src="../static/js/base.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>

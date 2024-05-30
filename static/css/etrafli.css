@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.etrafli-background {
+  background: radial-gradient(71.95% 649.34% at 28.05% 46.35%, #FFEDAB 0%, #FFE898 100%);
+}
+.etrafli-background .container-etrafli {
+  margin: 0 130px 0 130px;
+  padding: 0 15px 0 15px;
+  height: 100%;
+  width: 80%;
+}
+.etrafli-background .container-etrafli .row-etrafli {
+  padding: 85px 0 85px 0;
+}
+.etrafli-background .container-etrafli .row-etrafli .about {
+  margin: 0 60px 0 60px;
+  padding: 0 30px 0 30px;
+  display: flex;
+  gap: 70px;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about {
+  margin-top: 30px;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about button {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #555555;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about button:hover {
+  background-color: #141414;
+  color: white;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about h1 {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 36px;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about .mini-about {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about .mini-about p {
+  padding-right: 20px;
+  border-right: 1px solid black;
+  font-weight: 400;
+}
+.etrafli-background .container-etrafli .row-etrafli .about .card-about .mini-about h4 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.imkanlar-background {
+  background-image: url(../images/logo-ibar-inner.svg);
+  margin-top: 48px;
+  padding: 48px 0 48px 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+.imkanlar-background .imkanlar-container {
+  margin: 24px 130px 24px 130px;
+  padding: 15px 45px 15px 45px;
+}
+.imkanlar-background .imkanlar-container .row-imkanlar {
+  margin: 0 -15px 0 -15px;
+  padding-top: 8px;
+}
+
+.imkanlar-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.imkanlar-row .imkan1 {
+  margin-bottom: 48px;
+  padding: 0 15px 48px 15px;
+}
+
+.tarifler-background {
+  padding: 48px 0 48px 0;
+}
+.tarifler-background .tarifler-container {
+  margin: 24px 130px 24px 130px;
+  padding: 15px 45px 15px 45px;
+}
+.tarifler-background .tarifler-container .tarifler {
+  margin-left: 105px;
+  padding: 0 15px 0 15px;
+}
+.tarifler-background .tarifler-container .tarifler h1 {
+  margin-bottom: 70px;
+  font-weight: 600;
+}
+.tarifler-background .tarifler-container .tarifler .tarif-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(195, 195, 195);
+  font-size: 18px;
+}/*# sourceMappingURL=etrafli.css.map */
