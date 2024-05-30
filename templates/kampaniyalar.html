@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+<link rel="stylesheet" href="../static/css/style2.css">
+
+{% block content %}
+
+    <section class="kampaniyalar">
+        <div class="kamp-container">
+            <div class="kamp-rov">
+                <div class="kamp-kol">
+                    <div class="kamp-rov-2">
+                        <h1>Kampaniyalar</h1>
+                    </div>
+                    <div class="kamp-information">
+                        {% for kampaniya in kampaniyalar %}
+                        <div class="information-kol">
+                            <a href="#">{{ kampaniya.title }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

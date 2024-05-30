@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<section class="kreditler">
+    <div class="kre-container">
+        <div class="kre-rov">
+            <div class="k-kol-left">
+                <h1>Kreditlər</h1>
+            </div>
+            <div class="k-kol-right">
+                <p>ABB-dən hər kəsə sərfəli şərtlərlə kreditlər. Kreditinizi rahat şəkildə ABB vasitəsilə onlayn sifariş edə bilərsiniz.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="kredit-al">
+    <div class="container">
+        <div class="al-rov">
+            <div class="online-kol">
+                <div class="online-esas">
+                    {% for kredit in ekreditler %}
+
+                    <div class="online-hover"> 
+                        <div class="online-rov">
+                            <div class="on-kol-left">
+                                <figure class="on-figure">
+                                    <img src="{{ url_for('static', filename='images/kredit.png') }}" alt="">
+                                </figure>
+                            </div>
+                            <div class="on-kol-right">
+                                <div class="on-right-esas">
+                                    <h2>{{ kredit.title }}</h2>
+                                    <h3>{{ kredit.description }}</h3>
+                                    <div class="on-melumat">
+                                        <div class="mebleg">
+                                            <span class="reqem">
+                                                {{ kredit.price }} ₼
+                                            </span>
+                                            <span class="reqem-yazi">
+                                                Maksimal məbləğ
+                                            </span>
+                                        </div>
+                                        <div class="mebleg">
+                                            <span class="reqem">
+                                                {{ kredit.month }} ayadək
+                                            </span>
+                                            <span class="reqem-yazi">
+                                                Müddət
+                                            </span>
+                                        </div>
+                                        <div class="mebleg">
+                                            <span class="reqem">
+                                                {{ kredit.percent}}%-dən
+                                            </span>
+                                            <span class="reqem-yazi">
+                                                Faiz dərəcəsi
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="on-etrafli">
+                                        <a href="https://kredit.abb-bank.az/cash-loan?utm_source=abb-bank.az&amp;utm_medium=online-kredit&amp;utm_campaign=cash-loan" class="muraciet" >{{ kredit.button_1 }}</a>
+                                        <a href="https://abb-bank.az/az/ferdi/tecili-kredit-sifarisi" class="daha-etrafli">{{kredit.button_2}} ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="verilen-suallar">
+    <div class="s-container">
+        <div class="suallar-rov">
+            <div class="suallar-kol">
+                <h3>Tez-tez verilən suallar</h3>
+                <details class="tab-list">
+                    <summary  class="tab-title">Krediti kim ala bilər?</summary>
+                    <div class="sumary-text">
+                        <p class="tab-yazi">Rəsmi gəliri olan, əmək haqqını istənilən bankın kartı ilə alan hər kəs.</p>
+                        <p class="tab-yazi">Hazırda işlədikləri müəssisələrdə iş stajı ən azı 6 ay olan əməkdaşlar.</p>
+                        <p class="tab-yazi">Yaşı minimum 20, maksimum – kredit öhdəliyinin sonuncu ödəniş tarixinə 70 yaşı olanlar.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Kredit almaq üçün nə lazımdır?</summary>
+                    <div class="sumary-text">
+                        <p class="tab-yazi">Rəsmi iş yerinizin olması kifayətdir. Əmək haqqı kartınızın ABB bankdan və ya digər banklardan olmasının fərqi yoxdur.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Krediti necə əldə edə bilərəm?</summary>
+                    <div class="sumary-text">
+                        <p class="tab-yazi">ü Onlayn kredit müraciəti etməklə;</p>
+                        <p class="tab-yazi">ü ABB mobile tətbiqi ilə;</p>
+                        <p class="tab-yazi">ü İstənilən ABB filialına yaxınlaşmaqla.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Kredit əldə etmək üçün hansı sənədlər tələb olunur?</summary>
+                    <div class="sumary-text">
+                        <p style="font-size: 16px;" class="tab-yazi">Kredit əldə etmək üçün təkcə şəxsiyyət vəsiqəsi kifayətdir.</p>
+                        <p style="font-size: 13px;" class="tab-yazi">Qeyd: Ehtiyac olduqda rəsmi gəliri təsdiqləyən sənəd tələb oluna bilər.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Banka gəlmədən kredit əldə edə bilərəm?</summary>
+                    <div class="sumary-text">
+                        <p style="font-size: 16px;" class="tab-yazi">Bəli, banka gəlmədən onlayn müraciət etməklə nağd kredit və TamKart kredit kartı əldə edə bilərsiniz.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Filialda növbə gözləmədən kredit əldə edə bilərəm?</summary>
+                    <div class="sumary-text">
+                        <p style="font-size: 16px;" class="tab-yazi">Bəli. randevu.abb-bank.az saytından istifadə etməklə onlayn növbə götürüb filiala yaxınlaşa bilərsiniz.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Mövcud kreditimi bağlamadan əlavə kredit əldə edə bilərəm?</summary>
+                    <div class="sumary-text">
+                        <p style="font-size: 16px;" class="tab-yazi">Bəli, əlavə kredit ehtiyacı yaranarsa, paralel şəkildə ikinci kredit üçün müraciət edə bilərsiniz.</p>
+                    </div>
+                </details>
+
+                <details class="tab-list-2">
+                    <summary  class="tab-title">Kredit ödənişini necə həyata keçirə bilərəm?</summary>
+                    <div class="sumary-text">
+                        <p style="font-size: 16px;" class="tab-yazi">Kredit ödənişini ABB mobile tətbiqi, onlayn, ABB terminalları, MilliÖn, E-manat terminalları vasitəsilə həyata keçirə bilərsiniz.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

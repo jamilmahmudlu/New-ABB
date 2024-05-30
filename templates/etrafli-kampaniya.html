@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+<!-- <link rel="stylesheet" href="../static/css/style2.css"> -->
+
+{% block content %}
+
+
+    <section class="yaz-yay">
+        <div class="y-container">
+            <div class="y-title-rov">
+                {% for kampaniya in kampaniyalar %}
+                <div class="y-kol-title">
+                    <h1>{{ kampaniya.title }}</h1>
+                </div>
+            </div>
+            <div class="y-rov-body">
+                <div class="y-kol-left">
+                    <a href="https://abb-bank.az/az/kampaniyalar/konsertler-tamgenc-visa-karti-ile-daha-serfeli" class="">
+                        <span class="y-geri"> Geri qayıtmaq</span>
+                        <span class="y-icon" ></span>
+                    </a>
+                </div>
+                <div class="y-kol-right">
+                    <article class="y-right-body">
+                        <figure class="y-right-images">
+                            <img src="{{ url_for('static', filename="/images" ~ kampaniya.image ) }}" alt="">
+                        </figure>
+                        <div class="y-body">
+                            <h4>{{ kampaniya.title }}</h4>
+                            <p>{{ kampaniya.description }}</p>
+                            <p>{{ kampaniya.description_2 }}</p>
+                            <ul>
+                                {% for sert in sertler %}
+                                <li>{{ sert.description }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </section>
+
+{% endblock %}

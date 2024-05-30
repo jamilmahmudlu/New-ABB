@@ -1,0 +1,129 @@
+{% extends "base2.html" %}
+
+<link rel="stylesheet" href="../static/css/style2.css">
+  
+{% block content %}
+
+<section class="valyutalar">
+    <div class="valyuta-left">
+        <div class="v-container-left">
+            <h1>Valyuta məzənnələri</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Valyuta</th>
+                        <th>Satış</th>
+                        <th>Alış</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>USD</td>
+                        <td>1.7020</td>
+                        <td>1.6970</td>
+                    </tr>
+                    <tr>
+                        <td>EUR</td>
+                        <td>1.8663 <span class="arrow-up">▲</span></td>
+                        <td>1.8073 <span class="arrow-up">▲</span></td>
+                    </tr>
+                    <tr>
+                        <td>RUB</td>
+                        <td>0.0219 <span class="arrow-up">▲</span></td>
+                        <td>0.0161</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="valyuta-flex">
+                <p class="update-time">Son yenilənmə: 27.05.2024</p>
+                <a href="#" class="all-rates">Bütün valyuta məzənnələri</a>
+            </div>
+        </div>
+    </div>
+    <div class="valyuta-right">
+        <div class="valyuta">
+            <div class="valyuta-esas">
+                <h1>Valyuta konvertoru</h1>
+                <div class="input-container">
+                    <input type="number" placeholder="Satıram" value="1" min="1" class="amount">
+                    <select class="fromcurrency">
+                        <option value="USD">USD</option>
+                        <option value="AZN">AZN</option>
+                    </select>
+                </div>
+                <div class="convertercontainer">
+                    <input type="number"  class="convertedamount" >
+                    <select class="tocurrency">
+                        <option value="USD">USD</option>
+                        <option value="AZN">AZN</option>
+                    </select>
+                </div>
+                <div class="result"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="sigorta">
+    <div class="yusif">
+        <div class="container">
+            <div class="rov">
+                <div class="kol-left">
+                        <div class="left-rov">
+                            <div class="abb-mob">
+                                <div class="mob-yazi">
+                                    <h4>Sizə uyğun sığorta məhsulunu ABB mobile-dan seçin</h4>
+                                    <div class="detail">
+                                        <a href="https://abb-bank.az/az/sigorta">Daha ətraflı</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mob-img">
+                                <figure class="f-img">
+                                    <img src="../static/images/sigorta-ferdi.webp" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                </div>
+                <div class="bosh"></div>
+                <div class="kol-right">
+                    <div class="right-rov">
+                        <div class="abb-mob2">
+                            <div class="mob-yazi2">
+                                <h4>Mobil POS xidməti ilə biznes rahatlığı hər yerdə sizinlədir</h4>
+                                <div class="detail">
+                                    <a href="https://abb-bank.az/az/sigorta">Daha ətraflı</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mob-img2">
+                            <figure class="f-img2">
+                                <img src="./images/mobil-pos-original.webp" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="business">
+    <div class="container">
+        <div class="business-rov">
+            <div class="busi-kol">
+                <div class="yazi">
+                    <p>ABB Business İnternet Bank ilə sürətli əməliyyatlar</p>
+                    <div class="busi-detail">
+                        <a href="">Daha ətraflı > </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="../static/js/script.js"></script>
+
+{% endblock %}

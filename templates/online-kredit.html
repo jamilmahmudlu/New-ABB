@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    
+    <section class="yaz-yay-2">
+        <div class="y-container-2">
+            {% for ekredit in etraflikreditler %}
+            <div class="y-title-rov">
+                <div class="y-kol-title">
+                    <h1>{{ ekredit.title }}</h1>
+                </div>
+            </div>
+            <div class="y-rov-body">
+                <div class="y-kol-right">
+                    <article class="y-right-body">
+                        <div class="y-body">
+                            <p>{{ ekredit.title_mini }}</p>
+                            <p>{{ ekredit.title_mini_2 }}</p>
+                            <p>{{ ekredit.title_mini_3 }}</p>
+                            <p>{{ ekredit.title_mini_4 }}</p>
+                            <ul>
+                                <li>{{ ekredit.description }}</li>
+                                <li>{{ ekredit.description_2 }}</li>
+                                <li>{{ ekredit.description_3 }}</li>
+                            </ul>
+                            <p>{{ ekredit.title_mini_5 }}</p>
+                        </div>
+                    </article>
+                    <div class="y-button">
+                        <a href="{{ url_for('etrafli-kampaniyalar'), kampaniya_id = kampaniya.id }}">{{ ekredit.button }}</a>
+                    </div>
+            {% endfor %}
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="credit-calculator">
+        <div class="credit-container">
+            <div class="row-calc">
+                <div class="calculator">
+                    <h1 style="margin-bottom: 40px;">Kredit Kalkulyatoru</h1>
+                    <div style="display: flex; gap:50px;position: relative;">
+                    <form id="loan-form"style="width:50%;">
+                        <div class="range-slider">
+                            <div style="display: flex; justify-content:space-between;align-items:center;">
+                            <label for="amount">Kredit məbləği</label>
+                            <p><span id="amount-val">300</span>AZN</p>
+                            <input type="range" id="amount" min="0" max="40000" step="1" value="0"style="width:50.2%;left:-1px;bottom:168px;">
+                            </div>
+                        </div>
+                        <div class="range-slider">
+                            <div style="display: flex; justify-content:space-between;align-items:center;">
+                            <label for="interest">Faiz dərəcəsi</label>
+                            <p><span id="interest-val">10.9</span> %</p>
+                        </div>
+                            <input type="range" id="interest" min="10.9" max="30" step="0.1" value="10.9"style="width:50.2%;left:-1px;bottom:88px;">
+                        </div>
+                        <div class="range-slider">
+                            <div style="display: flex; justify-content:space-between;align-items:center;">
+                            <label for="years">Kredit müddəti</label>
+                            <p><span id="years-val">3</span> Ay</p>
+                        </div>
+                            <input type="range" id="years" min="1" max="60" step="1" value="1"style="width:50.2%;left:-1px;bottom:4px;">
+                        </div>
+                    </form>
+                    <div id="results">
+                        <div class="ayliq-odeme">
+                            <span id="monthly-payment" style="margin-right: 10px;">0 </span><span style="color: #343434;">₼</span>
+                            <label class="ay-label" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#343434">Aylıq ödəniş</label>
+                        </div>
+                        <div class="ayliq-odeme">
+                            <span id="total-payment" style="margin-right: 10px;">0 </span><span style="color: #343434;">₼</span>
+                            <label style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#343434">Ümumi məbləğ</label>
+                        </div>
+                        <button>Kredit alın</button>
+                    </div>
+                </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../static/js/script.js"></script>
+
+{% endblock %}

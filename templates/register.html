@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+{% from '_formhelpers.html' import render_field %}
+
+{% block content %}
+<hr>
+<a href="../templates/kredit.html">
+    <h1 style="text-align: center;">Online Kredit</h1>
+</a>
+<form action="", method="post">
+    {{ form.csrf_token }}
+    {{ render_field(form.first_name) }}
+    <br><br>
+    {{ render_field(form.last_name) }}
+    <br><br>
+    {{ render_field(form.phone) }}
+    <br><br>
+    {{ render_field(form.fin_code) }}
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+<hr>
+
+
+{% endblock %}
