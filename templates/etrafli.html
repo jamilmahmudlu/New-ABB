@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+<link rel="stylesheet" href="../static/css/etrafli.css">
+
+{% block content %}
+<div style="margin-top: 137px;">
+    <div class="etrafli-background">
+        <div class="container-etrafli">
+            <div class="row-etrafli">
+                <div class="about">
+                    <img src="{{ url_for('static', filename = 'images/' ~ kart.image_filename )}}" style="width: 487px;height:307px;" alt="">
+                    <div class="card-about">
+                        <h1 style="color: black; ">{{ kart.title }}</h1>
+                        {% if kart.description %}
+                        <p style="margin-bottom: 50px;font-size:18px;">{{ kart.description }}</p>
+                        {% endif %}
+                        <div class="mini-about">
+                            <p>{{ kart.desc2 }}</p>
+                            <h4>{{ kart.price_value }}</h4>
+                        </div>
+                        <button style="width: 174px;">Sifariş et</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="imkanlar-background">
+        <div class="imkanlar-container">
+            <div class="row-imkanlar">
+                <div style="margin-left: 105px; padding:0 15px 0 15px;">
+                    <h1 style="margin-bottom: 48px;padding-bottom:48px;margin-left:15px; font-weight:600;">İmkanlar</h1>
+                    <div class="imkanlar-row">
+                    {% for imkan in imkanlar %}
+                    <div class="imkan1" style="width: 85%;margin-bottom: 48px;
+                    padding: 0 15px 48px 15px; " >
+                        <img src="{{ url_for('static', filename = 'images/' ~ imkan.image) }}" alt="" style="margin-bottom: 30px;">
+                        <div>
+                            <p style="font-size: 17px;">{{ imkan.description }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% for sans in sanslar %}
+                <div style="font-weight:300;font-size:15px;">
+                    <p style="margin-bottom: 10px;"><sup>{{ sans.sup }}</sup>{{ sans.explanation }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <div class="tarifler-background">
+        <div class="tarifler-container"> 
+            <div class="tarifler">
+                <h1>Tariflər</h1>
+                {% for tarif in tarifler %}
+                <div class="tarif-content">
+                    <p>{{ tarif.column1 }}</p>
+                    <p>{{ tarif.price_value }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<script src="../static/js/base.js"></script>

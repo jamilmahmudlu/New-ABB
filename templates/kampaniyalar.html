@@ -14,7 +14,7 @@
                     <div class="kamp-information">
                         {% for kampaniya in kampaniyalar %}
                         <div class="information-kol">
-                            <a href="#">{{ kampaniya.title }}</a>
+                            <a href="{{ url_for('etrafli_kampaniyalar', kampaniya_id = kampaniya.id)}}">{{ kampaniya.title }}</a>
                         </div>
                         {% endfor %}
                     </div>

@@ -21,13 +21,13 @@
         <div class="al-rov">
             <div class="online-kol">
                 <div class="online-esas">
-                    {% for kredit in ekreditler %}
+                    {% for kredit in kreditler %}
 
                     <div class="online-hover"> 
                         <div class="online-rov">
                             <div class="on-kol-left">
                                 <figure class="on-figure">
-                                    <img src="{{ url_for('static', filename='images/kredit.png') }}" alt="">
+                                    <img src="{{ url_for('static', filename = 'images/' ~ kredit.image) }}" alt="">
                                 </figure>
                             </div>
                             <div class="on-kol-right">

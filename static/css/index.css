@@ -1,0 +1,209 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.background {
+  background: #EDEFF0;
+}
+.background .tamcard-cards {
+  margin: 0 130px 0 130px;
+  padding: 0 15px 0 15px;
+  height: 100%;
+  width: 80%;
+}
+.background .tamcard-cards .row-card {
+  padding: 48px 0 48px 0;
+  margin: 0 -15px 0 -15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 130px;
+}
+.background .tamcard-cards .row-card .tamcard-card {
+  padding: 0 15px 0 15px;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background {
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 110%;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background img {
+  width: 228px;
+  height: 144px;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background .card-content h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  margin: 18px 0 16px 0;
+  font-size: 22px;
+  max-width: 228px;
+  min-height: 56px;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background .card-content p {
+  margin: 0 4px 0 4px;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background .card-content .card-button {
+  margin-top: 50px;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background .card-content .card-button .button1 {
+  padding: 15px 24px 15px 24px;
+  width: 40%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3b8ae0;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}
+.background .tamcard-cards .row-card .tamcard-card .card-background .card-content .card-button .button2 {
+  padding: 15px 20px 15px 20px;
+  width: 45%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid #dedede;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.debet-background {
+  background: #ffffff;
+  margin-top: 20px;
+}
+.debet-background .debet-cards {
+  margin: 0 130px 0 130px;
+  padding: 50px 15px 0 15px;
+  height: 100%;
+  width: 80%;
+}
+.debet-background .debet-cards .row-card-debet {
+  padding: 48px 0 48px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.debet-card.hidden {
+  display: none;
+}
+
+button {
+  padding: 15px 20px 15px 20px;
+  width: 12%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid #dedede;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.debet-background2 {
+  background: #ffffff;
+  margin-top: 20px;
+}
+
+.debet-cards2 {
+  margin: 0 130px;
+  padding: 50px 15px;
+  height: 100%;
+  width: 80%;
+}
+
+.row-card-debet2 {
+  padding: 48px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.debet-card2.hidden2 {
+  display: none;
+}
+
+button {
+  padding: 15px 20px;
+  width: 12%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid #dedede;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #7c7c7c;
+}
+
+.suallar-background {
+  background: #EDEFF0;
+  margin-top: 50px;
+}
+.suallar-background .suallar-cont {
+  margin: 0 150px 0 150px;
+  padding: 60px 40px 60px 40px;
+  height: 100%;
+  width: 80%;
+}
+
+.suallar {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.suallar h1 {
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.faq-faq {
+  border-bottom: 1px solid rgb(136, 136, 136);
+  padding-bottom: 10px;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.faq-item h3 {
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.faq-item p {
+  display: none;
+}
+
+.card-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-background img {
+  transition: transform 0.3s ease;
+  width: 100%; /* Resmin tam genişliğe yayılmasını sağlamak için */
+}
+
+.tamcard-card:hover .card-background img {
+  transform: scale(1.05); /* Resmin %10 büyümesini sağlamak için */
+}
+
+.debet-card img {
+  transition: transform 0.3s ease;
+}
+
+.debet-card:hover img {
+  transform: scale(1.03);
+}/*# sourceMappingURL=index.css.map */

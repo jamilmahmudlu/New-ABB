@@ -247,7 +247,7 @@
         margin: 0 auto;
         padding: 0 15px;
         .business-rov{
-            background: url(images/abb-business.webp) no-repeat right;
+            background: url(/static/images/abb-business.webp) no-repeat right;
             background-size: cover;
             height: 100%;
             border-radius: 10px;
@@ -1537,19 +1537,19 @@ $font-family: Arial, sans-serif;
 //   padding: 0;
 // }
 
-h1 {
-  color: $primary-color;
-  text-align: center;
-}
+// h1 {
+//   color: $primary-color;
+//   text-align: center;
+// }
 
-form {
-  background: white;
-  border-radius: $border-radius;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: $spacing-unit * 2;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+// form {
+//   background: white;
+//   border-radius: $border-radius;
+//   max-width: 500px;
+//   margin: 50px auto;
+//   padding: $spacing-unit * 2;
+//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+// }
 
 form hr {
   margin: $spacing-unit 0;

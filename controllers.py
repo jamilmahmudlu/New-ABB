@@ -1,11 +1,8 @@
+from flask import render_template, request, redirect
 from app import app
-from flask import  render_template, request, redirect
-from form import *
+from forms import *
 from models import *
 
-@app.route('/abb/')
-def abb():
-    return render_template("style.html")
 
 @app.route('/kreditler/')
 def kreditler():
@@ -22,9 +19,9 @@ def kampaniyalar():
     kampaniyalar = Kampaniya.query.all()
     return render_template("kampaniyalar.html", kampaniyalar = kampaniyalar)
 
-@app.route('/etrafli-kampaniyalar/<int:kampaniya_id>')
+@app.route('/etrafli_kampaniyalar/<int:kampaniya_id>')
 def etrafli_kampaniyalar(kampaniya_id):
-    kampaniyalar = Kampaniya.query.all(kampaniya_id)
+    kampaniyalar = Kampaniya.query.get_or_404(kampaniya_id)
     sertler = Sertler.query.filter_by(kampaniya_id = kampaniya_id).all()
     return render_template("etrafli-kampaniya.html", kampaniyalar = kampaniyalar, sertler = sertler)
 
@@ -40,3 +37,26 @@ def register():
             my_new_user.save()
         return redirect ('/kreditler/')
     return render_template('register.html', form = form)
+
+
+@app.route('/kartlar/')
+def kartlar():
+    kartlar = Kart.query.all()
+    return render_template("index.html",kartlar = kartlar)
+
+
+@app.route('/etrafli/<int:kart_id>')
+def etrafli(kart_id):
+    kart = Kart.query.get_or_404(kart_id)
+    imkanlar = Imkan.query.filter_by(kart_id =kart_id).all()
+    sanslar = Sans.query.filter_by(kart_id =kart_id).all()
+    tarifler = Tarif.query.filter_by(kart_id =kart_id).all()
+    return render_template("etrafli.html", kart=kart, imkanlar=imkanlar, tarifler=tarifler, sanslar=sanslar)
+    
+@app.route('/abb/')
+def abb():
+    return render_template("main.html")
+
+
+
+

@@ -219,7 +219,7 @@
   padding: 0 15px;
 }
 .business .container .business-rov {
-  background: url(images/abb-business.webp) no-repeat right;
+  background: url(/static/images/abb-business.webp) no-repeat right;
   background-size: cover;
   height: 100%;
   border-radius: 10px;
@@ -1419,20 +1419,6 @@ input[type=range] {
 
 #total-payment {
   color: #3b3b3b;
-}
-
-h1 {
-  color: #3498db;
-  text-align: center;
-}
-
-form {
-  background: white;
-  border-radius: 5px;
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form hr {
